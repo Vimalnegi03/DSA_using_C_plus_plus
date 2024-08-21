@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+int calc(int v1,int v2,char op)
+{
+if(op=='^')
+{
+    return pow(v1,v2);
+}
+else if(op=='*')
+{
+    return v1*v2;
+}
+else if(op=='/')
+return v1/v2;
+else if(op=='+')
+return v1+v2;
+else
+return v1-v2;
+
+}
+int main()
+{
+    string s;
+    cin>>s;
+    stack<int>st;
+    for(int i=0;i<s.size();i++)
+    {
+        char ch=s[i];
+        if(isdigit(ch))
+        {
+            st.push(ch-'0');
+        }
+        else 
+        {
+            
+            int a=st.top();
+            st.pop();
+            int b=st.top();
+            st.pop();
+            int c=calc(a,b,s[i]);
+            st.push(c);
+        }
+    }
+    cout<<st.top();
+    
+}
