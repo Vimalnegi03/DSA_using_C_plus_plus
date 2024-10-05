@@ -96,4 +96,4 @@ If you have any questions or suggestions, feel free to reach out:
 
 ---
 
-Made with ❤️ by [Vimal Negi]
+Made with ❤️ by Vimal Negi
